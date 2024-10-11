@@ -9,8 +9,7 @@
 <body>
     <div class="container mt-5">
         <h2>Contact Us</h2>
-        <div id="message"></div> <!-- For displaying success/error message -->
-        <form id="contactForm">
+        <form action="http://lead-manage.infinityfreeapp.com/contact.php" method="POST"> <!-- Submit to contact.php -->
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" name="name" required>
@@ -26,25 +25,5 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            const formData = new FormData(this);
-            fetch('http://lead-manage.infinityfreeapp.com/contact.php', { // Your PHP endpoint
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('message').innerHTML = `<div class="alert alert-success">${data}</div>`;
-                document.getElementById('contactForm').reset(); // Reset the form
-            })
-            .catch(error => {
-                document.getElementById('message').innerHTML = `<div class="alert alert-danger">An error occurred: ${error.message}</div>`;
-            });
-        });
-    </script>
 </body>
 </html>
