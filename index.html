@@ -3,27 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Contact Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h2>Contact Us</h2>
-        <form action="http://lead-manage.infinityfreeapp.com/contact.php" method="POST">
+        <div id="message"></div> <!-- For displaying success/error message -->
+        <form id="contactForm">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" required>
             </div>
             <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" name="phone" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(this);
+            fetch('http://lead-manage.infinityfreeapp.com/contact.php', { // Your PHP endpoint
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('message').innerHTML = `<div class="alert alert-success">${data}</div>`;
+                document.getElementById('contactForm').reset(); // Reset the form
+            })
+            .catch(error => {
+                document.getElementById('message').innerHTML = `<div class="alert alert-danger">An error occurred: ${error.message}</div>`;
+            });
+        });
+    </script>
 </body>
 </html>
