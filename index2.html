@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity - Harper Securities</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Apply Apple system font */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000; /* Black background for the page */
+      color: #ffffff; /* White text for contrast */
+      height: auto; /* Allow the body to expand in height */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+      overflow-y: auto; /* Ensure vertical scroll is enabled */
+    }
+
+    /* Floating Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75%;
+      z-index: 1030;
+      background-color: transparent;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+      border: 2px solid #ffffff;
+      padding: 1rem 2rem;
+      border-radius: 40px;
+      backdrop-filter: saturate(200%) blur(30px);
+      -webkit-backdrop-filter: saturate(200%) blur(30px);
+      background-color: hsla(0, 0%, 100%, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #0073e6; /* Blue color on hover */
+    }
+
+    /* Hero Section */
+    section.hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2.5rem; /* Space between the hero text and image */
+      padding-top: 8rem; /* Increased space between navbar and hero */
+      min-height: 85vh; /* Increased hero section height */
+      background: #000000;
+      text-align: center;
+    }
+
+    .hero-text {
+      max-width: 600px; /* Increased text section size */
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-size: 3.36rem; /* Increased font size */
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 1.32rem; /* Increased text size */
+      margin-top: 1rem;
+    }
+
+    /* Hero Image */
+    .hero-image-container {
+      width: 768px; /* Increased image width */
+      height: auto;
+      border-radius: 15px; /* Curved border around image */
+      border: 5px solid #ffffff; /* White border around the image container */
+      overflow: hidden;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Get Free Security Audit Button */
+    .btn-audit {
+      font-size: 1.1rem;
+      font-weight: 600;
+      background-color: #0073e6; /* Blue button color */
+      border: 2px solid #0073e6; /* Blue border */
+      color: white; /* White text */
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      text-decoration: none; /* Remove underline */
+      display: inline-block;
+      margin-top: 2rem;
+    }
+
+    .btn-audit:hover {
+      background-color: #005bb5; /* Darker blue when hovered */
+      border-color: #005bb5;
+    }
+
+    /* Responsive Design for smaller screens */
+    @media (max-width: 768px) {
+      .navbar {
+        width: 90%; /* Adjust navbar for smaller screens */
+      }
+
+      section.hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding-top: 5rem; /* Reduced padding for mobile */
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem; /* Decreased font size for smaller screens */
+      }
+
+      .hero-image-container {
+        width: 100%;
+        margin-top: 2rem;
+        border-radius: 15px;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    /* Utility Classes */
+    .container {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Navbar (Added Internship link and moved all links to the right) -->
+  <nav class="navbar navbar-expand-lg navbar-light blur">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Harper Securities</a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0" style="gap: 1.5rem;">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Internship</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Dashboard Image -->
+  <section class="hero">
+    <!-- Left Text -->
+    <div class="hero-text">
+      <h1>Stay One Step Ahead of Hackers</h1>
+      <p>See your web portal before hackers do! Our solutions safeguard your business 24/7.</p>
+
+      <!-- Get Free Security Audit Button -->
+      <a href="#" class="btn-audit">Get Free Security Audit</a>
+    </div>
+
+    <!-- Right Image -->
+    <div class="hero-image-container">
+      <img src="/dashboardpic.jpg" alt="Dashboard Image" class="hero-image">
+    </div>
+  </section>
+
+  <!-- Optional JS for Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

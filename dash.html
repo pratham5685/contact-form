@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractive Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-blue-900 text-white h-screen">
+      <div class="p-6">
+        <h1 class="text-2xl font-bold mb-4">Harper Securities</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#metrics" class="block py-2 px-4 hover:bg-blue-700 rounded">Metrics Overview</a>
+            </li>
+            <li>
+              <a href="#scan-history" class="block py-2 px-4 hover:bg-blue-700 rounded">Scan History</a>
+            </li>
+            <li>
+              <a href="#graph" class="block py-2 px-4 hover:bg-blue-700 rounded">Severity Graph</a>
+            </li>
+            <li>
+              <a href="#notifications" class="block py-2 px-4 hover:bg-blue-700 rounded">Notifications</a>
+            </li>
+            <li>
+                <a href="#notifications" class="block py-2 px-4 hover:bg-blue-700 rounded">Support
+
+                </a>
+              </li>
+              <li>
+                <a href="#notifications" class="block py-2 px-4 hover:bg-blue-700 rounded">Book Consulting</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <!-- Header -->
+      <header class="bg-white p-4 rounded-lg shadow mb-6">
+        <h2 class="text-xl font-semibold">Welcome, User</h2>
+      </header>
+
+      <!-- Metrics Overview -->
+      <section id="metrics" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold">Total Vulnerabilities</h3>
+          <p class="text-4xl font-bold text-blue-600">25</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold">Critical Issues</h3>
+          <p class="text-4xl font-bold text-red-600">5</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold">High-Risk Areas</h3>
+          <p class="text-4xl font-bold text-orange-600">8</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="text-lg font-semibold">Last Scan</h3>
+          <p class="text-blue-600">Dec 23, 2024</p>
+        </div>
+      </section>
+
+      <!-- Severity Graph -->
+      <section id="graph" class="bg-white p-6 rounded-lg shadow mt-6">
+        <h2 class="text-lg font-semibold mb-4">Severity Distribution</h2>
+        <div>
+          <div class="flex items-center mb-2">
+            <span class="w-1/4">Critical</span>
+            <div class="w-3/4 bg-gray-200 h-4 rounded-lg overflow-hidden">
+              <div class="bg-red-600 h-full" style="width: 20%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="w-1/4">High</span>
+            <div class="w-3/4 bg-gray-200 h-4 rounded-lg overflow-hidden">
+              <div class="bg-orange-600 h-full" style="width: 30%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="w-1/4">Medium</span>
+            <div class="w-3/4 bg-gray-200 h-4 rounded-lg overflow-hidden">
+              <div class="bg-yellow-500 h-full" style="width: 25%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <span class="w-1/4">Low</span>
+            <div class="w-3/4 bg-gray-200 h-4 rounded-lg overflow-hidden">
+              <div class="bg-green-600 h-full" style="width: 25%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scan History -->
+      <section id="scan-history" class="bg-white p-6 rounded-lg shadow mt-6">
+        <h2 class="text-lg font-semibold mb-4">Scan History</h2>
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-blue-600 text-white">
+              <th class="p-3">Scan Date</th>
+              <th class="p-3">Vulnerabilities</th>
+              <th class="p-3">Critical</th>
+              <th class="p-3">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="p-3">Dec 23, 2024</td>
+              <td class="p-3">25</td>
+              <td class="p-3">5</td>
+              <td class="p-3 text-red-600">Unresolved</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-3">Dec 16, 2024</td>
+              <td class="p-3">20</td>
+              <td class="p-3">3</td>
+              <td class="p-3 text-green-600">Resolved</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Notifications -->
+      <section id="notifications" class="bg-white p-6 rounded-lg shadow mt-6">
+        <h2 class="text-lg font-semibold mb-4">Notifications</h2>
+        <div class="bg-red-100 text-red-800 p-3 rounded mb-3">
+          🔔 You have 5 unresolved critical issues.
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Enable Alerts
+        </button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
